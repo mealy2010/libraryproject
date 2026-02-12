@@ -3,37 +3,41 @@ function findAccountById(accounts, id) {
 }
 
 function sortAccountsByLastName(accounts) {
-  return accounts.sort((a, b) => {
-    const lastA = a.name.last.toLowerCase();
-    const lastB = b.name.last.toLowerCase();
-    return lastA.localeCompare(lastB);
-  });
+  return accounts.sort((a, b) =>
+    a.name.last.toLowerCase().localeCompare(b.name.last.toLowerCase())
+  );
+}
+
+function getAccountFullNames(accounts) {
+  return accounts.map((account) => `${account.name.first} ${account.name.last}`);
 }
 
 function getTotalNumberOfBorrows(account, books) {
   return books.reduce((total, book) => {
-    const timesBorrowedByAccount = book.borrows.filter(
-      (borrow) => borrow.id === account.id
-    ).length;
-    return total + timesBorrowedByAccount;
+    const count = book.borrows.filter((borrow) => borrow.id === account.id).length;
+    return total + count;
   }, 0);
 }
 
 function getBooksPossessedByAccount(account, books, authors) {
-  const checkedOutBooks = books.filter((book) => {
-    const latestBorrow = book.borrows[0];
-    return latestBorrow && latestBorrow.id === account.id && latestBorrow.returned === false;
+  const checkedOut = books.filter((book) => {
+    const latest = book.borrows[0];
+    return latest && latest.id === account.id && latest.returned === false;
   });
 
-  return checkedOutBooks.map((book) => {
+  return checkedOut.map((book) => {
     const author = authors.find((a) => a.id === book.authorId);
     return { ...book, author };
   });
 }
 
-module.exports = {
-  findAccountById,
-  sortAccountsByLastName,
-  getTotalNumberOfBorrows,
-  getBooksPossessedByAccount,
-};
+/**
+ * IMPORTANT:
+ * Export each function explicitly to avoid “overwritten module.exports” issues.
+ * (This is the most bulletproof way to satisfy the test import.)
+ */
+exports.findAccountById = findAccountById;
+exports.sortAccountsByLastName = sortAccountsByLastName;
+exports.getAccountFullNames = getAccountFullNames;
+exports.getTotalNumberOfBorrows = getTotalNumberOfBorrows;
+exports.getBooksPossessedByAccount = getBooksPossessedByAccount;
