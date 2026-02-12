@@ -36,8 +36,10 @@ function getBooksPossessedByAccount(account, books, authors) {
  * Export each function explicitly to avoid “overwritten module.exports” issues.
  * (This is the most bulletproof way to satisfy the test import.)
  */
-exports.findAccountById = findAccountById;
-exports.sortAccountsByLastName = sortAccountsByLastName;
-exports.getAccountFullNames = getAccountFullNames;
-exports.getTotalNumberOfBorrows = getTotalNumberOfBorrows;
-exports.getBooksPossessedByAccount = getBooksPossessedByAccount;
+module.exports = {
+  findAccountById,
+  sortAccountsByLastName,
+  getAccountFullNames,
+  getTotalNumberOfBorrows,
+  getBooksPossessedByAccount,
+};
