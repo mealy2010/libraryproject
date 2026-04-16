@@ -4,7 +4,7 @@
 
 This project simulates a local library system where users can borrow and return books. The goal was to build the core JavaScript logic that powers a dashboard showing book availability, borrowing activity, and general library statistics.
 
-The focus of this project is working with large datasets using JavaScript—not designing the UI. All functionality is built using arrays of books, authors, and accounts.
+The focus of this project is working with large datasets using JavaScript—not designing the user interface. All functionality is built using arrays of books, authors, and accounts.
 
 ---
 
@@ -13,90 +13,90 @@ The focus of this project is working with large datasets using JavaScript—not 
 Through this project, I strengthened my ability to:
 
 * Work with large and nested datasets
-* Use array methods like `find()`, `filter()`, `map()`, `sort()`, and `reduce()`
+* Use array methods such as `find()`, `filter()`, `map()`, `sort()`, and `reduce()`
 * Write clean, readable, and testable code
-* Debug using test results and error messages
-* Apply modern JavaScript features like arrow functions and destructuring
+* Debug issues using test results and error messages
+* Apply modern JavaScript features like arrow functions, destructuring, and the spread operator
 
 ---
 
 ## Project Plan
 
-I broke the project into three main parts based on the files provided:
+I organized the project into three main sections based on the provided files:
 
 ### Home (Dashboard)
 
 * Count total books and accounts
-* Identify how many books are currently checked out
-* Find the most common genres
-* Determine the most popular books and authors
+* Determine how many books are currently checked out
+* Identify the most common genres
+* Find the most popular books and authors
 
 ### Books
 
-* Find books and authors by ID
-* Separate borrowed vs returned books
-* Show borrower details for each book
+* Locate books and authors by ID
+* Separate borrowed books from returned books
+* Display borrower details for each book
 
 ### Accounts
 
-* Count how many times an account has borrowed books
-* Show which books an account currently has checked out
+* Calculate how many times an account has borrowed books
+* Identify which books an account currently has checked out
 
 ---
 
 ## Implementation Approach
 
-I followed a step-by-step process:
+I followed a structured process to complete the project:
 
-1. Reviewed the structure of the data (books, authors, accounts)
-2. Identified the expected output for each function
-3. Started with simpler functions (counts and basic lookups)
+1. Reviewed the dataset structure for books, authors, and accounts
+2. Identified the expected input and output for each function
+3. Started with simpler functions such as counts and lookups
 4. Built more complex logic using:
 
-   * `filter()` for grouping data
-   * `find()` for locating specific items
-   * `map()` for formatting results
-   * `sort()` for ranking
-5. Tested each function and adjusted based on results
-6. Refactored code to improve readability and meet rubric requirements
+   * `filter()` to group data
+   * `find()` to locate specific items
+   * `map()` to format results
+   * `sort()` to rank data
+5. Tested each function and refined logic based on results
+6. Cleaned up the code to improve readability and meet rubric requirements
 
 ---
 
 ## Example Navigation Structure
 
-If this project included a full UI, a good navigation setup would be:
+If this project included a full UI, an effective navigation structure would include:
 
-* **Dashboard** – shows totals and summary stats
-* **Books** – displays all books and their availability
-* **Accounts** – shows user borrowing activity
-* **Authors** – displays author popularity
+* **Dashboard** – overview of totals and key statistics
+* **Books** – list of all books and their availability
+* **Accounts** – user borrowing activity
+* **Authors** – author popularity and statistics
 
-This structure would make it easy for users to move between high-level stats and detailed information.
+This structure allows users to easily move between summary data and detailed records.
 
 ---
 
 ## Coding Decisions & Trade-offs
 
-One decision I made was to prioritize readability over writing very compact code. While some functions could be written in fewer lines using chained methods, I chose to break logic into clearer steps so it would be easier to understand and debug.
+I chose to prioritize readability over writing extremely compact code. While some functions could be shortened using chained methods, I broke the logic into clear steps to make debugging and understanding easier.
 
-I also kept functions separated by file (`home.js`, `books.js`, `accounts.js`) to keep the project organized and easier to maintain.
+I also kept functions separated into different files (`home.js`, `books.js`, and `accounts.js`) to maintain organization and improve maintainability.
 
 ---
 
 ## Challenges & Debugging
 
-The most challenging part was working with nested data, especially the borrowing records inside each book.
+One of the biggest challenges was working with nested data, especially the borrowing history inside each book.
 
-I also had to be careful when choosing between `find()` and `filter()`:
+Another challenge was deciding when to use `find()` versus `filter()`:
 
-* `find()` returns one result
+* `find()` returns a single result
 * `filter()` returns multiple results
 
-To solve issues, I:
+To work through these challenges, I:
 
-* tested functions one at a time
-* used console logs when needed
-* compared outputs directly with expected results
+* tested functions individually
+* used console logs to track values
+* compared outputs carefully with expected results
 
 ---
 
@@ -108,11 +108,11 @@ To solve issues, I:
 
 ### How I Used Them
 
-I used ChatGPT to help understand JavaScript logic, debug issues, improve code readability, and assist with organizing documentation.
+I used ChatGPT to better understand JavaScript logic, debug issues, improve code readability, and help organize documentation.
 
-I used YouTube as an educational resource to reinforce concepts like array methods (`find()`, `filter()`, `map()`, and `sort()`), and to watch step-by-step explanations of similar problems.
+YouTube was used as an educational resource to reinforce key concepts like array methods and to watch step-by-step examples of similar problems.
 
-Replit was used as a development tool to test and experiment with code in real time. It helped me quickly run functions, identify errors, and understand how changes affected the output.
+Replit was used as a development environment to test and run code in real time. It helped me quickly identify errors and understand how changes affected results.
 
 All tools were used to support my learning. I reviewed and verified all solutions before including them in the final project.
 
@@ -120,27 +120,13 @@ All tools were used to support my learning. I reviewed and verified all solution
 
 ## Project Summary
 
-This project focused on building JavaScript functions that analyze and organize library data. I used array methods like `find()`, `filter()`, `map()`, and `sort()` to create meaningful outputs such as book availability, popular genres, and borrowing trends. One of the biggest takeaways was learning how to work with nested data structures while keeping the code readable and organized. I also improved my debugging skills by using test results to refine my logic. Overall, this project helped strengthen my confidence in working with real-world data in JavaScript.
+This project focused on building JavaScript functions that analyze and organize library data. I used array methods like `find()`, `filter()`, `map()`, and `sort()` to generate useful insights such as book availability, popular genres, and borrowing trends. One of the most important lessons was learning how to work with nested data structures while keeping the code clean and readable. I also improved my debugging skills by using test feedback to refine my logic. Overall, this project strengthened my confidence in working with real-world data in JavaScript.
 
 ---
 
 ## Project Structure
-## Development Evidence (Replit Screenshots)
 
-These screenshots show my development process while working through the project logic using Replit.
-
-### Home.js Functions
-![Home](./images/real_replit1.png)
-
-### Books.js Functions
-![Books](./images/real_replit2.png)
-
-### Accounts.js Functions
-![Accounts](./images/real_replit3.png)
-<img width="3024" height="4032" alt="replit 2" src="https://github.com/user-attachments/assets/bfa5cd7b-9aac-4799-a96a-d05ba3b6026e" />
-<img width="3024" height="4032" alt="replit3" src="https://github.com/user-attachments/assets/f7e3a2f7-de34-4d62-8ed4-a794093f2873" />
-<img width="3024" height="4032" alt="replit" src="https://github.com/user-attachments/assets/699802eb-da25-4013-af21-961a2bfbcf2f" />
-
+```text
 public/
 └── src/
     ├── accounts.js
@@ -150,9 +136,27 @@ public/
 
 ---
 
+## Development Evidence (Replit Screenshots)
+
+These screenshots provide visual evidence of my development process while building and testing the project logic in Replit.
+
+### Home.js Functions
+
+![Home](./images/real_replit1.png)
+
+### Books.js Functions
+
+![Books](./images/real_replit2.png)
+
+### Accounts.js Functions
+
+![Accounts](./images/real_replit3.png)
+
+---
+
 ## How to Run
 
-Clone the repo:
+Clone the repository:
 
 ```bash
 git clone https://github.com/mealy2010/libraryproject.git
@@ -175,10 +179,15 @@ npm test
 ## Requirements Checklist
 
 * All tests passing
-* No single-letter variables
-* Uses arrow functions
-* Uses `find()` and `filter()`
-* Uses modern JavaScript features
-* Clean and readable code
+* No single-letter variables used
+* Use of arrow functions
+* Use of `find()` and `filter()`
+* Use of modern JavaScript features
+* Clean, readable, and organized code
 
 ---
+
+## Final Notes
+
+This project helped reinforce key JavaScript concepts and improved my ability to work with structured data. It also strengthened my problem-solving and debugging skills, especially when dealing with nested objects and arrays.
+
