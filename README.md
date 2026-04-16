@@ -125,6 +125,18 @@ This project focused on building JavaScript functions that analyze and organize 
 ---
 
 ## Project Structure
+## Development Evidence (Replit Screenshots)
+
+These screenshots show my development process while working through the project logic using Replit.
+
+### Home.js Functions
+![Home](./images/real_replit1.png)
+
+### Books.js Functions
+![Books](./images/real_replit2.png)
+
+### Accounts.js Functions
+![Accounts](./images/real_replit3.png)
 <img width="3024" height="4032" alt="replit 2" src="https://github.com/user-attachments/assets/bfa5cd7b-9aac-4799-a96a-d05ba3b6026e" />
 <img width="3024" height="4032" alt="replit3" src="https://github.com/user-attachments/assets/f7e3a2f7-de34-4d62-8ed4-a794093f2873" />
 <img width="3024" height="4032" alt="replit" src="https://github.com/user-attachments/assets/699802eb-da25-4013-af21-961a2bfbcf2f" />
