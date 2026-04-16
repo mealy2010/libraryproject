@@ -51,7 +51,7 @@ I followed a step-by-step process:
 1. Reviewed the structure of the data (books, authors, accounts)
 2. Identified the expected output for each function
 3. Started with simpler functions (counts and basic lookups)
-4. Moved to more complex logic using:
+4. Built more complex logic using:
 
    * `filter()` for grouping data
    * `find()` for locating specific items
@@ -79,7 +79,7 @@ This structure would make it easy for users to move between high-level stats and
 
 One decision I made was to prioritize readability over writing very compact code. While some functions could be written in fewer lines using chained methods, I chose to break logic into clearer steps so it would be easier to understand and debug.
 
-I also kept functions separated by file (`home.js`, `books.js`, `accounts.js`) to keep the project organized.
+I also kept functions separated by file (`home.js`, `books.js`, `accounts.js`) to keep the project organized and easier to maintain.
 
 ---
 
@@ -103,17 +103,18 @@ To solve issues, I:
 ## AI Tools Used
 
 * ChatGPT
+* YouTube
+* Replit
 
-### How I Used It
+### How I Used Them
 
-I used ChatGPT to:
+I used ChatGPT to help understand JavaScript logic, debug issues, improve code readability, and assist with organizing documentation.
 
-* help understand logic
-* debug issues
-* improve code readability
-* assist with writing documentation
+I used YouTube as an educational resource to reinforce concepts like array methods (`find()`, `filter()`, `map()`, and `sort()`), and to watch step-by-step explanations of similar problems.
 
-All code and decisions were reviewed and verified before being used.
+Replit was used as a development tool to test and experiment with code in real time. It helped me quickly run functions, identify errors, and understand how changes affected the output.
+
+All tools were used to support my learning. I reviewed and verified all solutions before including them in the final project.
 
 ---
 
@@ -125,7 +126,7 @@ This project focused on building JavaScript functions that analyze and organize 
 
 ## Project Structure
 
-```id="p9x3aa"
+```text
 public/
 └── src/
     ├── accounts.js
@@ -139,19 +140,19 @@ public/
 
 Clone the repo:
 
-```id="a2k8df"
+```bash
 git clone https://github.com/mealy2010/libraryproject.git
 ```
 
 Install dependencies:
 
-```id="l9s0df"
+```bash
 npm install
 ```
 
 Run tests:
 
-```id="m2k8sd"
+```bash
 npm test
 ```
 
@@ -167,4 +168,3 @@ npm test
 * Clean and readable code
 
 ---
-
