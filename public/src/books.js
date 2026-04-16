@@ -1,32 +1,63 @@
-const findAuthorById = (authors, id) => authors.find((author) => author.id === id);
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
 
-const findBookById = (books, id) => books.find((book) => book.id === id);
+    <title>Local Libary - Admin Dashboard - Books</title>
+  </head>
 
-const partitionBooksByBorrowedStatus = (books) => {
-  const borrowedBooks = [];
-  const returnedBooks = [];
+  <body>
+    <header class="container-fluid bg-light border-bottom">
+      <nav class="row align-items-center">
+        <h1 class="h4 px-3">Local Library</h1>
+        <div class="col">
+          <ul class="nav py-3">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Overall Stats</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./books.html">Stats by Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./accounts.html">Stats by Account</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-  books.forEach((book) => {
-    if (book.borrows[0].returned) {
-      returnedBooks.push(book);
-    } else {
-      borrowedBooks.push(book);
-    }
-  });
+    <main class="container my-4">
+      <section class="row">
+        <nav class="col-5" style="max-height: 85vh">
+          <div class="card mh-100 overflow-auto">
+            <div class="card-header">Books</div>
+            <ul id="books-list" class="list-group list-group-flush">
+              <li class="list-group-item">No books found...</li>
+            </ul>
+          </div>
+        </nav>
+        <article id="book-selection" class="col-7"></article>
+      </section>
+    </main>
 
-  return [borrowedBooks, returnedBooks];
-};
+    <script src="./data/accounts.js"></script>
+    <script src="./data/authors.js"></script>
+    <script src="./data/books.js"></script>
+    <script src="./setup.js"></script>
+    <script src="./src/books.js"></script>
+    <script src="./renderers/books.js"></script>
+  </body>
+</html>
 
-const getBorrowersForBook = (book, accounts) => {
-  return book.borrows.slice(0, 10).map((borrow) => {
-    const account = accounts.find((account) => account.id === borrow.id);
-    return { ...account, returned: borrow.returned };
-  });
-};
-
-module.exports = {
-  findAuthorById,
-  findBookById,
-  partitionBooksByBorrowedStatus,
-  getBorrowersForBook,
-};
