@@ -125,10 +125,10 @@ This project focused on building JavaScript functions that analyze and organize 
 ---
 
 ## Project Structure
-"C:\Users\union\Downloads\replit3.JPG"
-"C:\Users\union\Downloads\replit 2.JPG"
-"C:\Users\union\Downloads\replit.JPG"
-```text
+<img width="3024" height="4032" alt="replit 2" src="https://github.com/user-attachments/assets/bfa5cd7b-9aac-4799-a96a-d05ba3b6026e" />
+<img width="3024" height="4032" alt="replit3" src="https://github.com/user-attachments/assets/f7e3a2f7-de34-4d62-8ed4-a794093f2873" />
+<img width="3024" height="4032" alt="replit" src="https://github.com/user-attachments/assets/699802eb-da25-4013-af21-961a2bfbcf2f" />
+
 public/
 └── src/
     ├── accounts.js
