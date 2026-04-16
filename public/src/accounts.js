@@ -1,26 +1,65 @@
-const getTotalNumberOfBorrows = (account, books) => {
-  return books.reduce((totalBorrows, book) => {
-    const borrowCount = book.borrows.filter(
-      (borrow) => borrow.id === account.id
-    ).length;
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
 
-    return totalBorrows + borrowCount;
-  }, 0);
-};
+    <title>Local Libary - Admin Dashboard - Accounts</title>
+  </head>
 
-const getBooksPossessedByAccount = (account, books, authors) => {
-  const checkedOutBooks = books.filter((book) => {
-    const currentBorrow = book.borrows[0];
-    return currentBorrow.id === account.id && !currentBorrow.returned;
-  });
+  <body>
+    <header class="container-fluid bg-light border-bottom">
+      <nav class="row align-items-center">
+        <h1 class="h4 px-3">Local Library</h1>
+        <div class="col">
+          <ul class="nav py-3">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Overall Stats</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./books.html">Stats by Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./accounts.html"
+                >Stats by Account</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-  return checkedOutBooks.map((book) => {
-    const author = authors.find((author) => author.id === book.authorId);
-    return { ...book, author };
-  });
-};
+    <main class="container my-4">
+      <section class="row">
+        <nav class="col-5" style="max-height: 85vh">
+          <div class="card mh-100 overflow-auto">
+            <div class="card-header">Accounts</div>
+            <ul id="accounts-list" class="list-group list-group-flush">
+              <li class="list-group-item">No accounts found...</li>
+            </ul>
+          </div>
+        </nav>
+        <article id="account-selection" class="col-7"></article>
+      </section>
+    </main>
 
-module.exports = {
-  getTotalNumberOfBorrows,
-  getBooksPossessedByAccount,
-};
+    <script src="./data/accounts.js"></script>
+    <script src="./data/authors.js"></script>
+    <script src="./data/books.js"></script>
+    <script src="./setup.js"></script>
+    <script src="./src/accounts.js"></script>
+    <script src="./renderers/accounts.js"></script>
+  </body>
+</html>
+
