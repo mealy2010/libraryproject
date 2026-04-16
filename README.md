@@ -125,7 +125,9 @@ This project focused on building JavaScript functions that analyze and organize 
 ---
 
 ## Project Structure
-
+"C:\Users\union\Downloads\replit3.JPG"
+"C:\Users\union\Downloads\replit 2.JPG"
+"C:\Users\union\Downloads\replit.JPG"
 ```text
 public/
 └── src/
