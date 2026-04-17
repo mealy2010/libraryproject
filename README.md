@@ -107,7 +107,11 @@ All tools were used to support my learning. I reviewed and verified all solution
 This project focused on building JavaScript functions that analyze and organize library data. I used array methods like `find()`, `filter()`, `map()`, and `sort()` to generate useful insights such as book availability, popular genres, and borrowing trends. One of the most important lessons was learning how to work with nested data structures while keeping the code clean and readable. I also improved my debugging skills by using test feedback to refine my logic. Overall, this project strengthened my confidence in working with real-world data in JavaScript.
 
 ## Project Structure
+![Home](https://github.com/mealy2010/libraryproject/blob/main/images/real_replit1.png?raw=true)
 
+![Books](https://github.com/mealy2010/libraryproject/blob/main/images/real_replit2.png?raw=true)
+
+![Accounts](https://github.com/mealy2010/libraryproject/blob/main/images/real_replit3.png?raw=true)
 ```text
 public/
 └── src/
