@@ -4,9 +4,7 @@
 
 This project simulates a local library system where users can borrow and return books. The goal was to build the core JavaScript logic that powers a dashboard showing book availability, borrowing activity, and general library statistics.
 
-The focus of this project is working with large datasets using JavaScript—not designing the user interface. All functionality is built using arrays of books, authors, and accounts.
-
----
+The focus of this project is working with large datasets using JavaScript rather than designing the user interface. All functionality is built using arrays of books, authors, and accounts.
 
 ## What I Learned
 
@@ -17,8 +15,6 @@ Through this project, I strengthened my ability to:
 * Write clean, readable, and testable code
 * Debug issues using test results and error messages
 * Apply modern JavaScript features like arrow functions, destructuring, and the spread operator
-
----
 
 ## Project Plan
 
@@ -42,25 +38,21 @@ I organized the project into three main sections based on the provided files:
 * Calculate how many times an account has borrowed books
 * Identify which books an account currently has checked out
 
----
-
 ## Implementation Approach
 
 I followed a structured process to complete the project:
 
-1. Reviewed the dataset structure for books, authors, and accounts
-2. Identified the expected input and output for each function
-3. Started with simpler functions such as counts and lookups
+1. Reviewed the dataset structure for books, authors, and accounts.
+2. Identified the expected input and output for each function.
+3. Started with simpler functions such as counts and lookups.
 4. Built more complex logic using:
 
    * `filter()` to group data
    * `find()` to locate specific items
    * `map()` to format results
    * `sort()` to rank data
-5. Tested each function and refined logic based on results
-6. Cleaned up the code to improve readability and meet rubric requirements
-
----
+5. Tested each function and refined logic based on results.
+6. Cleaned up the code to improve readability and meet rubric requirements.
 
 ## Example Navigation Structure
 
@@ -73,15 +65,11 @@ If this project included a full UI, an effective navigation structure would incl
 
 This structure allows users to easily move between summary data and detailed records.
 
----
-
 ## Coding Decisions & Trade-offs
 
 I chose to prioritize readability over writing extremely compact code. While some functions could be shortened using chained methods, I broke the logic into clear steps to make debugging and understanding easier.
 
 I also kept functions separated into different files (`home.js`, `books.js`, and `accounts.js`) to maintain organization and improve maintainability.
-
----
 
 ## Challenges & Debugging
 
@@ -97,8 +85,6 @@ To work through these challenges, I:
 * tested functions individually
 * used console logs to track values
 * compared outputs carefully with expected results
-
----
 
 ## AI Tools Used
 
@@ -116,13 +102,9 @@ Replit was used as a development environment to test and run code in real time. 
 
 All tools were used to support my learning. I reviewed and verified all solutions before including them in the final project.
 
----
-
 ## Project Summary
 
 This project focused on building JavaScript functions that analyze and organize library data. I used array methods like `find()`, `filter()`, `map()`, and `sort()` to generate useful insights such as book availability, popular genres, and borrowing trends. One of the most important lessons was learning how to work with nested data structures while keeping the code clean and readable. I also improved my debugging skills by using test feedback to refine my logic. Overall, this project strengthened my confidence in working with real-world data in JavaScript.
-
----
 
 ## Project Structure
 
@@ -134,25 +116,21 @@ public/
     └── home.js
 ```
 
----
-
 ## Development Evidence (Replit Screenshots)
 
 These screenshots provide visual evidence of my development process while building and testing the project logic in Replit.
 
 ### Home.js Functions
 
-![Home](./images/real_replit1.png)
+![Home](https://github.com/mealy2010/libraryproject/blob/main/images/real_replit1.png?raw=true)
 
 ### Books.js Functions
 
-![Books](./images/real_replit2.png)
+![Books](https://github.com/mealy2010/libraryproject/blob/main/images/real_replit2.png?raw=true)
 
 ### Accounts.js Functions
 
-![Accounts](./images/real_replit3.png)
-
----
+![Accounts](https://github.com/mealy2010/libraryproject/blob/main/images/real_replit3.png?raw=true)
 
 ## How to Run
 
@@ -174,8 +152,6 @@ Run tests:
 npm test
 ```
 
----
-
 ## Requirements Checklist
 
 * All tests passing
@@ -184,8 +160,6 @@ npm test
 * Use of `find()` and `filter()`
 * Use of modern JavaScript features
 * Clean, readable, and organized code
-
----
 
 ## Final Notes
 
