@@ -119,21 +119,6 @@ public/
     └── home.js
 ```
 
-## Development Evidence (Replit Screenshots)
-
-These screenshots provide visual evidence of my development process while building and testing the project logic in Replit.
-
-### Home.js Functions
-
-![Home](https://github.com/mealy2010/libraryproject/blob/main/images/real_replit1.png?raw=true)
-
-### Books.js Functions
-
-![Books](https://github.com/mealy2010/libraryproject/blob/main/images/real_replit2.png?raw=true)
-
-### Accounts.js Functions
-
-![Accounts](https://github.com/mealy2010/libraryproject/blob/main/images/real_replit3.png?raw=true)
 
 ## How to Run
 
