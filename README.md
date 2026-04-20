@@ -1,32 +1,60 @@
-<img width="6833" height="4366" alt="test results" src="https://github.com/user-attachments/assets/4ed7360b-5128-46ea-a039-9070e7345630" />## Setup Instructions
+# Local Library Project
 
-This project was completed in the Qualified environment as part of the Local Library assessment.
+## 📚 Project Overview
+This project is a Local Library dashboard application designed to help track books, accounts, and borrowing activity. It provides key insights such as which books are currently borrowed, popular authors, and account activity.
 
-To review the code:
-1. Open the repository on GitHub.
-2. Review the files inside `public/src/`.
-3. See the included screenshots for evidence of the completed project and test results.
+The project demonstrates core JavaScript concepts including working with arrays, objects, and higher-order functions.
 
-## Test Results
+---
 
-The project functions were completed and verified in the Qualified platform.
+## 🚀 Features
+- View total number of books and accounts
+- Track books that are currently borrowed vs returned
+- Identify the most common genres
+- Identify the most popular books
+- Identify the most popular authors
+- View borrower history for each book
+- Find accounts and books using search functionality
 
-Screenshots of the passing test results are included below:
+---
 
-
-<img width="6833" height="4366" alt="test results" src="https://github.com/user-attachments/assets/eb700233-7e08-495a-9b52-39a64ae39e28" />
-
-
-
-
-
-
-## Notes
-
-This project demonstrates JavaScript fundamentals including:
+## 🧠 JavaScript Concepts Used
 - `find()`
 - `filter()`
 - `map()`
+- `reduce()`
 - `sort()`
-- object and array manipulation
-- working with nested data structures
+- Arrow functions
+- Object and array destructuring
+
+---
+
+## ✅ Qualified Test Results (All Tests Passing)
+All required tests were completed using the Qualified platform. The results below show that all tests are passing successfully.
+
+👉 *Insert your Qualified screenshot(s) below:*
+
+![Qualified Test Results](./screenshots/qualified-tests.png)
+
+---
+
+## 💻 Development Process (Replit Screenshots)
+The following screenshots show my development process while working through the project using Replit.
+
+👉 *Insert your Replit screenshots below:*
+
+![Replit Screenshot 1](./screenshots/replit1.png)
+![Replit Screenshot 2](./screenshots/replit2.png)
+
+---
+
+## 🛠️ Tools & Resources Used
+- JavaScript (ES6)
+- GitHub (version control and project hosting)
+- Replit (development environment)
+- YouTube (additional learning support)
+- :contentReference[oaicite:0]{index=0} (testing and validation)
+
+---
+
+## 📁 Project Structure
