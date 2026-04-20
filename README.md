@@ -34,7 +34,9 @@ All required tests were completed using the Qualified platform. The results belo
 
 👉 *Insert your Qualified screenshot(s) below:*
 
-![Qualified Test Results](./screenshots/qualified-tests.png)
+<img width="6833" height="4366" alt="test results" src="https://github.com/user-attachments/assets/813775de-cea1-4419-b579-5d75964ad035" />
+<img width="3024" height="4032" alt="real_replit2" src="https://github.com/user-attachments/assets/5bb96d85-99fc-4c51-9453-32b243fb48bb" />
+
 
 ---
 
@@ -43,8 +45,9 @@ The following screenshots show my development process while working through the 
 
 👉 *Insert your Replit screenshots below:*
 
-![Replit Screenshot 1](./screenshots/replit1.png)
-![Replit Screenshot 2](./screenshots/replit2.png)
+
+<img width="3024" height="4032" alt="real_replit1" src="https://github.com/user-attachments/assets/1c12c625-cdd3-4ac5-8574-ca845357b3ef" />
+
 
 ---
 
