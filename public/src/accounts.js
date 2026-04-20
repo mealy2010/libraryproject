@@ -1,65 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="icon" href="favicon.png" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
+const { findAuthorById } = require("./books");
 
-    <title>Local Libary - Admin Dashboard - Accounts</title>
-  </head>
+function findAccountById(accounts, id) {
+  return accounts.find((account) => account.id === id);
+}
 
-  <body>
-    <header class="container-fluid bg-light border-bottom">
-      <nav class="row align-items-center">
-        <h1 class="h4 px-3">Local Library</h1>
-        <div class="col">
-          <ul class="nav py-3">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">Overall Stats</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./books.html">Stats by Book</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="./accounts.html"
-                >Stats by Account</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+function sortAccountsByLastName(accounts) {
+  return accounts.sort((a, b) => {
+    const lastA = a.name.last.toLowerCase();
+    const lastB = b.name.last.toLowerCase();
 
-    <main class="container my-4">
-      <section class="row">
-        <nav class="col-5" style="max-height: 85vh">
-          <div class="card mh-100 overflow-auto">
-            <div class="card-header">Accounts</div>
-            <ul id="accounts-list" class="list-group list-group-flush">
-              <li class="list-group-item">No accounts found...</li>
-            </ul>
-          </div>
-        </nav>
-        <article id="account-selection" class="col-7"></article>
-      </section>
-    </main>
+    if (lastA < lastB) return -1;
+    if (lastA > lastB) return 1;
+    return 0;
+  });
+}
 
-    <script src="./data/accounts.js"></script>
-    <script src="./data/authors.js"></script>
-    <script src="./data/books.js"></script>
-    <script src="./setup.js"></script>
-    <script src="./src/accounts.js"></script>
-    <script src="./renderers/accounts.js"></script>
-  </body>
-</html>
+function getTotalNumberOfBorrows(account, books) {
+  let borrowCount = 0;
 
+  books.forEach((book) => {
+    book.borrows.forEach((borrow) => {
+      if (borrow.id === account.id) {
+        borrowCount++;
+      }
+    });
+  });
+
+  return borrowCount;
+}
+
+function getBooksPossessedByAccount(account, books, authors) {
+  const result = [];
+
+  books.forEach((book) => {
+    const currentBorrow = book.borrows.find((borrow) => borrow.returned === false);
+
+    if (currentBorrow && currentBorrow.id === account.id) {
+      const author = findAuthorById(authors, book.authorId);
+
+      result.push({
+        ...book,
+        author,
+      });
+    }
+  });
+
+  return result;
+}
+
+module.exports = {
+  findAccountById,
+  sortAccountsByLastName,
+  getTotalNumberOfBorrows,
+  getBooksPossessedByAccount,
+};
