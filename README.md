@@ -13,7 +13,11 @@ The project functions were completed and verified in the Qualified platform.
 
 Screenshots of the passing test results are included below:
 
-![Qualified Test Results](public/images/qualified-test-results.png)
+
+
+
+
+
 
 ## Notes
 
